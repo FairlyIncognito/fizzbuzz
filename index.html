@@ -7,6 +7,65 @@
     <title>Landing Page</title>
 </head>
 <body>
+    <script>
+        let lineBreak =function() {
+            document.write("<br>");
+        } 
     
+        // add number + 7
+        let add7 = number => number + 7;
+        document.write(add7(10));
+        lineBreak(); // new line
+
+
+        // add a + b
+        let multiply = function(a,b) {
+            return(a+b);
+        }
+        document.write(multiply(2,2));
+        lineBreak(); // new line
+
+
+        // capitalize first letter in string
+        let string = "hEllO mY naME iS MiCkEY";
+        let capitalize = function() {
+            string = string.toLowerCase();
+            return string.charAt(0).toUpperCase() + string.slice(1);
+
+        }
+        document.write(capitalize());
+        lineBreak(); // new line
+
+
+        // last character in string
+        let text = "abcd";
+        let lastLetter = function() {
+            // textLength equals 4, but as counting starts from 0 we subtract 1
+            let textLength = text.length - 1;
+            return text.charAt(textLength);
+        }
+        document.write(lastLetter());
+        lineBreak(); // new line
+        
+
+        // FizzBuzz
+        let answer = parseInt(prompt("FizzBuzz up to which number?"));
+
+        for (let i = 1; i <= answer; i++) {
+            if(i % 3 === 0 && i % 5 === 0) {
+                document.write("FizzBuzz");
+                lineBreak(); // new line
+            } else if(i % 3 === 0) {
+                document.write("Fizz");
+                lineBreak(); // new line
+            } else if (i % 5 === 0) {
+                document.write("Buzz")
+                lineBreak(); // new line
+            } else {
+                document.write(i);
+                lineBreak(); // new line
+            }
+        }
+    </script>
 </body>
 </html>
